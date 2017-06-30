@@ -2,7 +2,7 @@ module.exports = function (config) {
     config.set({
         basePath: '',
         files: [
-            {pattern: 'src/**/*.js', included: true, watched: true, served: true}
+            {pattern: 'src/**/!(*main).js', included: true, watched: true, served: true}
         ],
         autoWatch : false,
         singleRun: true,

@@ -1,7 +1,7 @@
 {
-  "name": "vanilla-boilerplate",
+  "name": "katas-roman-numeral",
   "version": "1.0.0",
-  "description": "vanilla javascript project boilerplate",
+  "description": "simple kata demonstrating TDD",
   "main": "server.js",
   "scripts": {
     "test": "karma start karma.conf.js",
