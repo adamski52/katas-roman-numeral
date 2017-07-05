@@ -2,7 +2,5 @@ language: node_js
 node_js:
   - "6"
 
-provider: script
-    script: node scripts/deploy.js
-    on:
-      branch: ci-test
+after_success:
+  - node scripts/deploy.js
