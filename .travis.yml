@@ -1,4 +1,8 @@
 language: node_js
 node_js:
-  - "iojs"
   - "6"
+
+provider: script
+    script: node scripts/deploy.js FTP_HOST FTP_USERNAME FTP_PASSWORD FTP_DIRECTORY
+    on:
+      branch: master
