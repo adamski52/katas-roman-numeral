@@ -3,6 +3,6 @@ node_js:
   - "6"
 
 provider: script
-    script: node scripts/deploy.js FTP_HOST FTP_USERNAME FTP_PASSWORD FTP_DIRECTORY
+    script: node scripts/deploy.js
     on:
-      branch: master
+      branch: ci-test

@@ -2,10 +2,10 @@ const ftp = require('ftp'),
       fs = require('fs');
 
 var client = new ftp(),
-    host = process.argv[2],
-    username = process.argv[3],
-    password = process.argv[4],
-    directory = process.argv[5];
+    host = process.env.FTP_HOST,
+    username = process.env.FTP_USERNAME,
+    password = process.env.FTP_PASSWORD,
+    directory = process.env.FTP_DIRECTORY;
 
 client.on('ready', function() {
     console.log("CLOBBERING DIRECTORY: " + directory);
