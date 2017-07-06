@@ -3,7 +3,7 @@ node_js:
   - "6"
 
 script:
-  - npm run build
+  - npm run build || exit 1
 
 after_success:
-  - npm run publish
+  - npm run publish || exit 1
