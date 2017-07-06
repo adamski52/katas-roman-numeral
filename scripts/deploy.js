@@ -1,5 +1,4 @@
-const ftp = require('ftp'),
-      fs = require('fs');
+const ftp = require('ftp');
 
 var client = new ftp(),
     host = process.env.FTP_HOST,
@@ -8,8 +7,19 @@ var client = new ftp(),
     directory = process.env.FTP_DIRECTORY;
 
 client.on('ready', function() {
-    console.log("CLOBBERING DIRECTORY: " + directory);
-    client.end();
+    client.delete(directory, function(err) {
+        if(err) {
+            throw err;
+        }
+
+        client.put("dist/", directory, function(err) {
+            if(err) {
+                throw err;
+            }
+
+            client.end();
+        });
+    });
 });
 
 client.connect({

@@ -3,4 +3,4 @@ node_js:
   - "6"
 
 after_success:
-  - node scripts/deploy.js
+  - npm run build

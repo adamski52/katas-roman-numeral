@@ -1,6 +1,6 @@
-# Vanilla Boilerplate
+# Katas / Roman Numeral
 
-Vanilla JavaScript (no frameworks, no transpiling, etc) boilerplate, including modules, classes (but no prototype stuff), testing and coverage.
+A TDD exercise
 
 ## Setup
 Run `npm install` to download everything you need.

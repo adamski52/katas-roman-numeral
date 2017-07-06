@@ -5,7 +5,8 @@
   "main": "server.js",
   "scripts": {
     "test": "karma start karma.conf.js",
-    "start": "node server.js"
+    "start": "node scripts/server.js",
+    "build": "node scripts/build.js"
   },
   "author": "jonathan adamski",
   "license": "ISC",
