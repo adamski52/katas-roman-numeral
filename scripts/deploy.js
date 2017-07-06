@@ -7,11 +7,13 @@ var client = new ftp(),
     directory = process.env.FTP_DIRECTORY;
 
 client.on('ready', function() {
+    console.log("CLOBBERING DIRECTORY: ", directory);
     client.delete(directory, function(err) {
         if(err) {
             throw err;
         }
 
+        console.log("COPYING dist/ TO: ", directory);
         client.put("dist/", directory, function(err) {
             if(err) {
                 throw err;
@@ -20,6 +22,12 @@ client.on('ready', function() {
             client.end();
         });
     });
+});
+
+client.on('error', function(err) {
+    console.log("ERROR");
+    console.log(err);
+    throw err;
 });
 
 client.connect({
