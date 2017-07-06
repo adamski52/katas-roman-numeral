@@ -7,8 +7,7 @@
     "test": "karma start karma.conf.js",
     "start": "node scripts/server.js",
     "build": "node scripts/build.js",
-    "deploy": "(npm run build && node scripts/deploy.js) || exit 1",
-    "publish": "npm run deploy || exit 1"
+    "publish": "node scripts/deploy.js"
   },
   "author": "jonathan adamski",
   "license": "ISC",
