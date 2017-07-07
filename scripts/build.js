@@ -1,8 +1,13 @@
 const fs = require('fs-extra');
 
-fs.copy("src", "dist", function(err) {
-    if(err) {
-        console.log(err);
+fs.remove("dist", function(err) {
+    if (err) {
         throw err;
     }
+
+    fs.copy("src", "dist", function (err) {
+        if (err) {
+            throw err;
+        }
+    });
 });
