@@ -1,6 +1,6 @@
-var deployer = require("travis-ftpr");
+var TravisFTPr = require("travis-ftpr");
 
-deployer.deploy({
+TravisFTPr().deploy({
     host: process.argv[2],
     username: process.argv[3],
     password: process.argv[4],
