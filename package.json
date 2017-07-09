@@ -23,6 +23,6 @@
     "karma-spec-reporter": "0.0.31",
     "phantomjs-prebuilt": "^2.1.14",
     "recursive-readdir": "^2.2.1",
-    "travis-ftpr": "0.0.4"
+    "travis-ftpr": "0.1.0"
   }
 }
