@@ -2,7 +2,7 @@
   "name": "katas-roman-numeral",
   "version": "1.0.0",
   "description": "simple kata demonstrating TDD",
-  "main": "server.js",
+  "main": "scripts/server.js",
   "scripts": {
     "test": "karma start karma.conf.js",
     "start": "node scripts/server.js",

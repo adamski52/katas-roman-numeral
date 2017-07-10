@@ -4,6 +4,6 @@ var express = require('express'),
 
 app.listen(3000);
 
-app.use(express.static(path.join(__dirname, 'src')));
+app.use(express.static(path.resolve(__dirname + '/../src')));
 
 console.log("Express started at :3000");
